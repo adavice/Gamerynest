@@ -158,7 +158,7 @@ div.wpwl-brand-custom {
     color: var(--main-text);
     margin: 20px auto 30px;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     display: block;
     border-color: unset;
     float: unset;

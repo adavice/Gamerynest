@@ -117,14 +117,14 @@ form .input {
     margin-bottom: 10px;
     background: transparent;
     outline: none;
-    color: var(--highlight);
+    color: #5d9bf8;
     background: var(--darker);
-    border-radius: 8px;
-    height: 40px;
+    border-radius: 5px;
+    height: 42px;
 }
 
 input#cardName {
-    font-family: robotoregular, Helvetica, Arial, sans-serif;
+    /*font-family: robotoregular, Helvetica, Arial, sans-serif;*/
 }
 
 .CardField--ltr .CardBrandIcon-container {
@@ -180,4 +180,16 @@ select:-webkit-autofill:focus {
 #card-expiry span.glyphicon.glyphicon-question-sign,
 #card-cvc span.glyphicon.glyphicon-question-sign{
     top: 10px;
+}
+
+::-webkit-input-placeholder {
+    color: #5d9bf8 !important;
+}
+
+:-moz-placeholder {
+    color: #5d9bf8 !important;
+}
+
+::-moz-placeholder {
+    color: #5d9bf8 !important;
 }
