@@ -1247,6 +1247,9 @@ a.learn:hover {
 
 .footer a img {
 	border-radius: 5px;
+	width: 250px;
+    margin: auto;
+    display: block;
 }
 
 .footer .links {
