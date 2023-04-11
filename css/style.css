@@ -273,6 +273,7 @@ h3 {
 	float: right !important;
 	margin-right: -15px;
 	align-items: center;
+	gap: 30px;
 }
 
 .header {
@@ -3335,6 +3336,10 @@ li>a {
 		flex-direction: column;
 		align-items: center;
 	}
+
+	.navbar-right{
+		gap: 10px;
+	}
 }
 
 
@@ -4181,10 +4186,11 @@ textarea#message {
 		margin: 0 0 20px;
 		/*background: var(--darker);*/
 		justify-content: space-between;
+		gap: 5px;
 	}
 
 	.navbar-nav>li {
-		font-size: 11px;
+		font-size: 14px;
 	}
 
 	.navbar:hover #navbar>ul>li>a {
