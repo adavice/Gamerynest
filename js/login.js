@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 // stranding Lights
 
-/*document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
     //add "noLights" class on ny element to prevent lights animation
     let stop = document.getElementsByClassName('noLights');
     if (stop.length>0) {
@@ -63,4 +63,4 @@ setInterval(toStrand, 3000);
             randomPosition(figure2);
             randomPosition(figure3);
     }
-});*/
+});
