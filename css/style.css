@@ -100,7 +100,7 @@ a[href^=tel] {
 	pointer-events: none;
 	top: 100px;
 	left: 25%;
-
+display: none;
 }
 
 #warning {
