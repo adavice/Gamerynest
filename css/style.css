@@ -5344,6 +5344,7 @@ textarea#message {
 @media screen and (max-width: 480px) {
 	.contact_page input[type="submit"] {
 		margin: 20px auto 30px;
+		float: none;
 	}
 
 	.contact_page form img {
