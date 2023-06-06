@@ -89,20 +89,16 @@
     -webkit-overflow-scrolling: touch;
 }
 form.cardForm {
-    max-width: 390px;
+    max-width: 470px;
     margin: auto;
 }
 form .input {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--high_inactive);
+    border: 1px solid var(--primary);
     margin-bottom: 10px;
     background: transparent;
     outline: none;
-    color: #5d9bf8;
-    background: var(--darker);
-    border-radius: 5px;
-    height: 42px;
 }
 .CardField--ltr .CardBrandIcon-container {
     right: 0;
@@ -126,7 +122,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    color: var(--highlight);
+    color: #fff;
 }
 .SfcField {
     position: relative;
@@ -134,28 +130,4 @@ select:-webkit-autofill:focus {
 .SfcField .glyphicon {
     top: 20%;
     z-index: 30;
-}
-
-::-webkit-input-placeholder {
-    color: #5d9bf8 !important;
-}
-
-:-moz-placeholder {
-    color: #5d9bf8 !important;
-}
-
-::-moz-placeholder {
-    color: #5d9bf8 !important;
-}
-
-#cardName::-webkit-input-placeholder {
-    color: #5d9bf8 !important;
-}
-
-#cardName:-moz-placeholder {
-    color: #5d9bf8 !important;
-}
-
-#cardName::-moz-placeholder {
-    color: #5d9bf8 !important;
 }
