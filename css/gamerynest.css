@@ -1418,6 +1418,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 /*-- Collections --*/
 .collection-agileits {
 	padding: 50px 0px;
+	display: none;
 }
 
 .collection-left,
@@ -1807,14 +1808,23 @@ p.agileits {
 
 /*--events--*/
 .events-left-agile-agileits-ltpwrlayouts {
-	background: url(../images/e1.jpg) no-repeat 0px 0px;
-	background-size: cover;
-	min-height: 400px;
-	padding: 0;
+	background: url(../images/gamerynest_e1.jpg) no-repeat 0px 0px;
+    width: 100%;
+    background-size: cover;
+    min-height: 400px;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-blend-mode: darken;
 }
 
 .events-right-agile {
 	padding: 0;
+	display: none;
 }
 
 .events-text-ltpwr-agile {
