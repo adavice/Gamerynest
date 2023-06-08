@@ -7,6 +7,7 @@
 	--highlight: #3f86ed;
 	--high_inactive: rgb(41, 84, 149);
 	--main-text: #a1c3f7;
+	--bright:#a1c3f7;
 	--high_grad: linear-gradient(to left, var(--highlight), var(--high_inactive));
 	--medium_grad: linear-gradient(45deg, var(--secondary), #091555);
 	--ambient_grad: linear-gradient(to bottom, var(--secondary), var(--darker));
@@ -1461,7 +1462,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 .collection-grid.collection-image.collection-grid-2 {
-	background: url(../images/c4.jpg) no-repeat 0px 0px;
+	background: url(../images/gc4.jpg) no-repeat 0px 0px;
 	background-size: cover;
 }
 
@@ -1471,7 +1472,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 .collection-grid.collection-image.collection-grid-6 {
-	background: url(../images/c2.jpg) no-repeat 0px 0px;
+	background: url(../images/gc2.jpg) no-repeat 0px 0px;
 	background-size: cover;
 }
 
