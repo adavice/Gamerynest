@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Profile</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Google Tag Manager -->
@@ -27,7 +27,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/login.js"></script>
 </head>
-<body class="profile_page">
+<body class="login_page">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVZPCLL"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -49,17 +49,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a  href="gamerynest_index.html" class="logo"><img src="./images/logo_gamerynest.png" alt=""></a>
+                <a  href="index.html" class="logo"><img src="./images/logo_gamerynest.png" alt=""></a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hover-effect"><a href="gamerynest_index.html">Home</a></li>
-                    <li class="hover-effect"><a href="gamerynest_story.html">Our story</a></li>
-                    <li class="hover-effect"><a href="gamerynest_games.html">Games</a></li>
-                    <li class="hover-effect"><a href="gamerynest_news.html">News</a></li>
-                    <li class="hover-effect active"><a href="gamerynest_contactus.html">Contact</a></li>
-						<li ><a class="hover-effect" id="profile" href="./gamerynest_profile.html"><?xml version="1.0" encoding="iso-8859-1"?>
+                    <li class="hover-effect"><a href="index.html">Home</a></li>
+                    <li class="hover-effect"><a href="story.html">Our story</a></li>
+                    <li class="hover-effect"><a href="games.html">Games</a></li>
+                    <li class="hover-effect"><a href="news.html">News</a></li>
+                    <li class="hover-effect"><a href="contactus.html">Contact</a></li>
+                    <li class="hover-effect"><a href="cancel.html">Cancel subscription</a></li>
+						<li ><a class="hover-effect" id="profile" href="./profile.html"><?xml version="1.0" encoding="iso-8859-1"?>
 							<svg class="desk_only" version="1.1" fill="var(--main-text)" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 								 viewBox="0 0 478.024 478.024" style="enable-background:new 0 0 478.024 478.024; " xml:space="preserve">
                      <defs>
@@ -111,8 +112,8 @@
 						<span class="mob_only">Profile</span>
 						</a>
 							<ul id="sub_menu">
-								<li><a href="./gamerynest_login.html">Login</a></li>
-								<li><a href="./gamerynest_signup.html">Sign Up</a></li>
+							<li><a href="./login.html">Login</a></li>
+								<li><a href="./signup.html">Sign Up</a></li>
 							</ul>
 						</li>
                 </ul>
@@ -125,30 +126,66 @@
 <!-- banner -->
 <div class="contact-agileinfo">
     <div class="container">
-        <h2>Profile</h2>
+        <h2>Login</h2>
 
-        <div class="col-md-6 contact-right-ltpwr framed">
-            <h5>Phone number</h5>
-            <h3 id="user_id">1234567</h3>
-            <button class="button btn-secondary">Logout</button>
-            <button class="button underline">Unsubscribe</button>
+        <div class="col-md-12 contact-right-ltpwr framed">
+            <p class="form_descr"><i class="round_num">1.</i>Enter the email address you entered when registering which serves as your login and your password.</p>
+            <form id="home-option1-form" role="form">
+                <div class="row">
+                    <div class="row">
+                            <div class="form-group col-sm-4">
+                                <label for="home-option1-email-input">Email</label>
+                                <div>
+                                    <input type="email" class="form-control required input form-input" pattern=".{6,}" name="home-option1-email-input" id="home-option1-email-input" placeholder="Email" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-4">
+                                <label for="home-option1-password-input">Password</label>
+                                <div>
+                                    <input type="password" class="form-control required input form-input" name="home-option1-password-input" id="home-option1-password-input" placeholder="Password" required="">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <div class=" form-group-submit-btn">
+                                    <button id="home-option1-submit-btn" type="submit" class="btn btn-primary button">
+                                        Login
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                </div>
+            </form>
         </div>
 
+        <div class="col-md-12 contact-right-ltpwr framed">
+            <p class="form_descr"><i class="round_num">2.</i>Forgot your login details? Enter your email to recover your password.</p>
+            <form id="home-option3-form" role="form">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-8">
+                        <div class="form-group">
+                            <label for="home-option3-email-input">Email</label>
+                            <div>
+                                <input type="email" class="form-control required input form-input" pattern=".{6,}" name="home-option3-email-input" id="home-option3-email-input" placeholder="Email" required="">
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-lg-4 col-sm-4">
+                        <div class="form-group form-group-submit-btn">
+                            <button type="submit" id="home-option3-submit-btn" class="btn btn-secondary button">
+                                Recover Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="clearfix"></div>
     </div>
-</div>
-<div class="container">
-<div class="agileits_reply col-md-6 framed">
-    <h3>Have a question?</h3>
-    <form action="#" method="post">
-        <input type="text" name="Name" placeholder="Name" required="">
-        <input type="email" name="Email" placeholder="Email" required="">
-        <input type="text" name="Subject" placeholder="Subject" required="">
-        <textarea name="Message" placeholder="Type your comment..." required=""></textarea>
-        <input type="submit" class="button btn-secondary" value="Submit">
-    </form>
-</div>
 </div>
 <!-- footer -->
 <div class="footer">
@@ -176,44 +213,44 @@
         <div class="col-md-5 footer-middle-ltpwr">
             <h4>Latest Games</h4>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
             </div>
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-ltpwr">
-            <a href="gamerynest_index.html"><img src="./images/logo_gamerynest.png" alt=""></a>
+            <a href="index.html"><img src="./images/logo_gamerynest.png" alt=""></a>
             <p>Gamerynest - where pixels come to life! </p>
             <p class="agileinfo">Step into our world and embark on epic adventures, battle fierce foes, and solve mind-bending puzzles! Exclusively for adults worldwide.</p>
         </div>
         <div class="clearfix"></div>
         <div class="links">
-            <a href="gamerynest_contactus.html">Contact us</a>
-            <a href="./gamerynest_policy.html">Privacy Policy</a>
-            <a href="./gamerynest_terms.html">Terms &amp; Conditions</a>
-            <a href="./gamerynest_faq.html">FAQ</a>
-            <a href="./gamerynest_refund.html">Refund Policy</a>
-            <a href="./gamerynest_sub_gamerynest_terms.html">Subscription Terms</a>
+            <a href="contactus.html">Contact us</a>
+            <a href="./policy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms &amp; Conditions</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./refund.html">Refund Policy</a>
+            <a href="./sub_terms.html">Subscription Terms</a>
         </div>
         <div class="copyright">
             <p>&copy; <script>document.write(new Date().getFullYear())</script> Gamerynest. All Rights Reserved</p>

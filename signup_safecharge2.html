@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://cdn.safecharge.com/safecharge_resources/v1/websdk/safecharge.js"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,6 +21,8 @@
     <!-- css -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/gamerynest.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/safecharge.css">
+
     <!--// css -->
     <!-- font -->
 
@@ -50,17 +54,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a  href="gamerynest_index.html" class="logo"><img src="./images/logo_gamerynest.png" alt=""></a>
+                <a  href="index.html" class="logo"><img src="./images/logo_gamerynest.png" alt=""></a>
             </div>
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hover-effect"><a href="gamerynest_index.html">Home</a></li>
-                    <li class="hover-effect"><a href="gamerynest_story.html">Our story</a></li>
-                    <li class="hover-effect"><a href="gamerynest_games.html">Games</a></li>
-                    <li class="hover-effect"><a href="gamerynest_news.html">News</a></li>
-                    <li class="hover-effect active"><a href="gamerynest_contactus.html">Contact</a></li>
-						<li ><a class="hover-effect" id="profile" href="./gamerynest_profile.html"><?xml version="1.0" encoding="iso-8859-1"?>
+                    <li class="hover-effect"><a href="index.html">Home</a></li>
+                    <li class="hover-effect"><a href="story.html">Our story</a></li>
+                    <li class="hover-effect"><a href="games.html">Games</a></li>
+                    <li class="hover-effect"><a href="news.html">News</a></li>
+                    <li class="hover-effect active"><a href="contactus.html">Contact</a></li>
+						<li ><a class="hover-effect" id="profile" href="./profile.html"><?xml version="1.0" encoding="iso-8859-1"?>
 							<svg class="desk_only" version="1.1" fill="var(--main-text)" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 								 viewBox="0 0 478.024 478.024" style="enable-background:new 0 0 478.024 478.024; " xml:space="preserve">
                      <defs>
@@ -112,8 +116,8 @@
 						<span class="mob_only">Profile</span>
 						</a>
 							<ul id="sub_menu">
-							<li><a href="./gamerynest_login.html">Login</a></li>
-								<li><a href="./gamerynest_signup.html">Sign Up</a></li>
+							<li><a href="./login.html">Login</a></li>
+								<li><a href="./signup.html">Sign Up</a></li>
 							</ul>
 						</li>
                 </ul>
@@ -139,7 +143,7 @@
             <span>Enjoy our services</span>
         </div>
     </div>
-<div class="blog">
+    <div class="blog">
         <div class="col-md-7 wthree_blog_left">
 
             <div class="agileits_reply">
@@ -159,19 +163,43 @@
                     <span id="cc_form_error"></span>
                 </div>
                 <form method="post" class="cardForm">
-                    <span><input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required=""></span>
-                    <span><input type="text" id="cardName" name="cardName" placeholder="Name on Card" required=""><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipRight"><img
-                            src="./images/cardTip2.jpg" alt=""></div></span></span>
-                    <span><input type="text" id="expMonth" maxlength="2" name="expMonth" placeholder="Exp. Month" required=""><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipLeft"><img
-                            src="./images/cardTip1.jpg" alt=""></div></span></span>
-                    <span><input type="text" id="expYear" maxlength="2" name="expYear" placeholder="Exp. Year" required=""><span class="glyphicon glyphicon-question-sign"><div class="cardTip "><img
-                            src="./images/cardTip1.jpg" alt=""></div></span></span>
-                    <span><input type="text" id="cvv2" name="cvv2" placeholder="CVV2" required=""><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipRight"><img
-                            src="./images/cardTip3.jpg" alt=""></div></span></span>
+                    <label for="card-expiry" data-tid="scwsdk.form.card_expiry_label">
+                        Name
+                    </label>
+                    <span><input type="text" id="cardName" name="cardName" placeholder="Name on Card" required=""><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipRight"><img src="./images/cardTip2.jpg" alt=""></div></span></span>
+                    <div class="row">
+                        <div class="field">
+                            <label for="card-number" data-tid="scwsdk.form.card_number_label">
+                                Card number
+                            </label>
+                            <div id="card-number" class="input"></div>
+
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field col6">
+                            <label for="card-expiry" data-tid="scwsdk.form.card_expiry_label">
+                                Expiration
+                            </label>
+                            <div id="card-expiry" class="input empty"><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipRight"><img src="./images/cardTip1.jpg" alt=""></div></span></div>
+
+                            <div class="underline "></div>
+                        </div>
+                        <div class="field col6">
+                            <label for="card-cvc" data-tid="scwsdk.form.card_cvc_label">
+                                CVC
+                            </label>
+                            <div id="card-cvc" class="input empty"><span class="glyphicon glyphicon-question-sign"><div class="cardTip tipRight"><img src="./images/cardTip3.jpg" alt=""></div></span></div>
+
+                            <div class="underline "></div>
+                        </div>
+                    </div>
+                    <br/><br/>
                     <span class="form-hint">Authentication charge: <b>TOTAL OF 1 EUR</b> (will be refunded back to you)</span>
                     <span class="form-hint2">The transaction will appear as gamerynest.com on your credit card bill</span>
-                <input class="button" type="submit" value="Pay">
-            </form>
+                    <input class="button" type="submit" value="Pay">
+                </form>
             </div>
 
 
@@ -185,37 +213,37 @@
         </div>
         <div class="col-md-5 wthree_blog_right">
 
-        <div class="ltpwragile_flickr_posts">
+            <div class="ltpwragile_flickr_posts">
 
-            <div class="ltpwragile_flickr_post_left payment">
-                <div class="extraCard">
-                    <img class="joystick" src="./images/joystick.svg" alt="">
-                    <h2>VIP Membership</h2>
-                    <h3>28.95€ / month</h3>
-                    <ul class="benefit">
-                        <li>Unlimited Access</li>
-                        <li>Try 3 days, free of charge</li>
-                        <li>Recurring conditions, 28.95 EUR monthly</li>
-                    </ul>
+                <div class="ltpwragile_flickr_post_left payment">
+                    <div class="extraCard">
+                        <img class="joystick" src="https://cdn.marketjs.net/games/love-bears/localization/en/media/graphics/promo/banners/180x120.jpg" alt="">
+                        <h2>VIP Membership</h2>
+                        <h3>28.95€ / month</h3>
+                        <ul class="benefit">
+                            <li>Unlimited Access</li>
+                            <li>Try 3 days, free of charge</li>
+                            <li>Recurring conditions, 28.95 EUR monthly</li>
+                        </ul>
+                    </div>
+
                 </div>
+                <div class="ltpwragile_flickr_post_left desk_only">
+                    <img src="https://cdn.marketjs.net/games/catapultz-io/localization/en/media/graphics/promo/banners/180x120.jpg" alt=" " class="img-responsive">
+                </div>
+                <div class="ltpwragile_flickr_post_left desk_only">
+                    <img src="https://cdn.marketjs.net/games/pilot-training/localization/en/media/graphics/promo/banners/180x120.jpg" alt=" " class="img-responsive">
+                </div>
+                <!--<div class="ltpwragile_flickr_post_left">
+                    <a href="game_info.html?id=5053848449187840"><img src="https://cdn.marketjs.net/games/dart-game/localization/en/media/graphics/promo/banners/180x120.jpg" alt=" " class="img-responsive"></a>
+                </div>
+                <div class="ltpwragile_flickr_post_left">
+                    <a href="game_info.html?id=5553244093808640"><img src="https://cdn.marketjs.net/games/monster-mahjong/localization/en/media/graphics/promo/banners/180x120.jpg" alt=" " class="img-responsive"></a>
+                </div>-->
 
+                <div class="clearfix"> </div>
             </div>
-            <div class="ltpwragile_flickr_post_left desk_only">
-                <img src="images/gc4.jpg" alt=" " class="img-responsive">
-            </div>
-            <div class="ltpwragile_flickr_post_left desk_only">
-                <img src="images/gc2.jpg" alt=" " class="img-responsive">
-            </div>
-            <!--<div class="ltpwragile_flickr_post_left">
-                <a href="gamerynest_game_info.html"><img src="images/ng4.jpg" alt=" " class="img-responsive"></a>
-            </div>
-            <div class="ltpwragile_flickr_post_left">
-                <a href="gamerynest_game_info.html"><img src="images/ng5.jpg" alt=" " class="img-responsive"></a>
-            </div>-->
-
-            <div class="clearfix"> </div>
         </div>
-    </div>
         <div class="clearfix"> </div>
     </div>
 </div>
@@ -227,7 +255,7 @@
             <h4>Contact</h4>
             <ul>
                 <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></li>
-                <li><a href="mailto:example@mail.com"><h6>support@gamerynest.com</h6></a></li>
+                <li><a href="/cdn-cgi/l/email-protection#315449505c415d54715c50585d1f525e5c"><h6><span class="__cf_email__" data-cfemail="b6c5c3c6c6d9c4c2f6dad9d9c2c6d9c1d3c498d5d9db">[email&#160;protected]</span></h6></a></li>
             </ul>
             <ul>
                 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
@@ -245,47 +273,47 @@
         <div class="col-md-5 footer-middle-ltpwr">
             <h4>Latest Games</h4>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=5619817429073920"><img src="https://cdn.marketjs.net/games/unblock-it/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=4563783218364416"><img src="https://cdn.marketjs.net/games/smiley-shapes/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=5904882830671872"><img src="https://cdn.marketjs.net/games/guess-the-soccer-star/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=6309518813167616"><img src="https://cdn.marketjs.net/games/unblock-it/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=4657023200264192"><img src="https://cdn.marketjs.net/games/hearts-connect/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=6750909515169792"><img src="https://cdn.marketjs.net/games/flossy-and-jim-whale-tickler/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=5870866186371072"><img src="https://cdn.marketjs.net/games/puzzle-slide-travel-edition/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="col-md-3 img-ltpwr-agile footer-middle-wthree">
-                <a href="gamerynest_game_info.html"><img src="images/128x128.jpg" alt=" " /></a>
+                <a href="game_info.html?id=4885861473714176"><img src="https://cdn.marketjs.net/games/wham-o-slip-and-slide-party/localization/en/media/graphics/promo/icons/128x128.png" alt=" " /></a>
             </div>
             <div class="clearfix"></div>
         </div>
         <div class="col-md-4 footer-right-ltpwr">
-            <a href="gamerynest_index.html"><img src="./images/logo_gamerynest.png" alt=""></a>
+            <a href="index.html"><img src="./images/logo_gamerynest.png" alt=""></a>
             <p>Gamerynest - where pixels come to life! </p>
             <p class="agileinfo">Step into our world and embark on epic adventures, battle fierce foes, and solve mind-bending puzzles! Exclusively for adults worldwide.</p>
         </div>
         <div class="clearfix"></div>
         <div class="links">
-            <a href="gamerynest_contactus.html">Contact us</a>
-            <a href="./gamerynest_policy.html">Privacy Policy</a>
-            <a href="./gamerynest_terms.html">Terms &amp; Conditions</a>
-            <a href="./gamerynest_faq.html">FAQ</a>
-            <a href="./gamerynest_refund.html">Refund Policy</a>
-            <a href="./gamerynest_sub_gamerynest_terms.html">Subscription Terms</a>
+            <a href="contactus.html">Contact us</a>
+            <a href="./policy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms &amp; Conditions</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./refund.html">Refund Policy</a>
+            <a href="./sub_terms.html">Subscription Terms</a>
         </div>
         <div class="copyright">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Gamerynest. All Rights Reserved</p>
+            <p>&copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Gamerynest. All Rights Reserved</p>
         </div>
     </div>
 </div>
@@ -298,4 +326,63 @@
 
 
 </script>
+<script>
+    // Instantiate Nuvei API
+    var sfc = SafeCharge({
+        env: 'test', // the environment you are running on, 'prod' for production
+        merchantId : "1574577095205270900",
+        merchantSiteId : "208126",
+    });
+    //Instantiate Nuvei Fields
+    var ScFields = sfc.fields({
+        fonts: [
+            { cssUrl: 'https://fonts.googleapis.com/css?family=Roboto' }, // include your custom fonts
+        ]
+    });
+    // set state field style/ check Nuvei Fields for details.
+    var ScFieldStyles = {
+        base: {
+            color: '#ffffff',
+            fontWeight: 400,
+            fontFamily: 'Roboto, Consolas, Menlo, monospace',
+            fontSize: '15px',
+            fontSmoothing: 'antialiased',
+            '::placeholder': {
+                color: '#CFD7DF',
+            },
+            ':-webkit-autofill': {
+                color: '#e39f48',
+            },
+        },
+        invalid: {
+            color: '#ff3148',
+            '::placeholder': {
+                color: '#394d79',
+            },
+        },
+    };
+    var ScFieldClasses = {
+        focus: 'focused',
+        empty: 'empty',
+        invalid: 'invalid',
+        complete: 'complete',
+    };
+    // Instantiate Nuvei Fields
+    var scard= ScFields.create('ccNumber', {
+        style: ScFieldStyles,
+        classes: ScFieldClasses,
+    });
+    scard.attach('#card-number');
+    var cardExpiry = ScFields.create('ccExpiration', {
+        style: ScFieldStyles,
+        classes: ScFieldClasses,
+    });
+    cardExpiry.attach('#card-expiry');
+    var cardCvc = ScFields.create('ccCvc', {
+        style: ScFieldStyles,
+        classes: ScFieldClasses,
+    });
+    cardCvc.attach('#card-cvc');
+</script>
+
 </html>
